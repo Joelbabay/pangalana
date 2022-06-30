@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import 'shared/variables';
+@import "~bootstrap/scss/bootstrap";
+h1,
+h2 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 62px;
+    line-height: 73px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+input,
+button {
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.header {
+    height: 662px;
+    background: url(../../public/images/background/cover-30.jpg) center top;
+    background-size: cover;
+}
+
+.container {
+    //max-width: 1088px;
+    padding: 0;
+}
+
+
+/*--------------------------------*\
+    $MENU
+\*--------------------------------*/
+
+nav {
+    .navbar-brand {
+        font-size: 14px;
+    }
+    ul {
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 48px;
+        text-transform: uppercase;
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        padding-left: 50px;
+        .nav-link {
+            padding: 0;
+        }
+    }
+    &:first-child {
+        padding: 0;
+    }
+}
+
+
+/*--------------------------------*\
+    $TITLE
+\*--------------------------------*/
+
+section {
+    .baseline {
+        margin-top: 180px;
+    }
+}
+
+.leads {
+    width: 352px;
+    margin-top: 20px;
+}
+
+
+/*--------------------------------*\
+    $BOOKING SECTION
+\*--------------------------------*/
+
+.box {
+    width: 100%;
+    height: 148px;
+    background-color: #fff;
+    padding: 32px 92px;
+}
+
+.booking-input {
+    height: 148px;
+    margin: 0 auto;
+}
