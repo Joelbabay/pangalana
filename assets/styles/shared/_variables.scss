@@ -1,6 +1,9 @@
 $font-family-sans-serif: Poppins;
-$primary: green;
-$container-max-widths: ( sm: 540px, md: 720px, lg: 1088px, xl: 1088px);
+$primary: #71C7DB;
+$secondary: #B1B1B1;
+$dark: #121212;
+$navbar-light-active-color: $primary;
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl:1088px, xxl: 1088px);
 $form-label-color: $primary;
 $form-label-font-size: 13px;
 $form-label-font-weight: 500;
@@ -10,3 +13,5 @@ $input-btn-padding-x: 16px;
 $input-font-weight: 400;
 $input-bg: #EEEE;
 $input-placeholder-color:#CECECE;
+$card-border-radius: 0;
+$card-border-width: 0;

@@ -1,78 +1,501 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Hello HomeController!
+{% endblock %}
 
 {% block body %}
 
-    <header class="header">
-        <nav class="navbar navbar-expand-lg bg-white">
-            <div class="container">
-                <a class="navbar-brand" href="#">Pangalana</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto flex-nowrap">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Rooms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Restaurant</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <section>
-            <div class="container baseline">
-                <div class="align-items-center g-0 row">
-                    <h1 class="text-white">
-                        The best hotel <br>you will ever need
-                    </h1>
-                    <p class="text-white leads">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    </p>
-                </div>
-            </div>
-        </section>
-    </header>
-    <div class="bg-white py-4 booking-input position-relative">
-        <div class="container box shadow-lg position-absolute bottom-0 start-50 translate-middle">
-            <div class="d-flex justify-content-between">
-                <div class="col-3">
-                    <label for="basic-url" class="form-label">Check in Date</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="check in date">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <label for="basic-url" class="form-label">Check out date</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="check out date">
-                    </div>
-                </div>
-                <div class="col-3">
-                    <label for="basic-url" class="form-label">Rooms</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="rooms">
-                    </div>
-                </div>
-                <button class="btn btn-primary">
-                    check
-                </button>
-            </div>
-        </div>
-    </div>
+	<header class="header">
+		<nav class="navbar navbar-expand-lg bg-white">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="{{ asset('images/logo/logo-pangalana-1.svg') }}" alt="logo-pangalana" width="200">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ms-auto flex-nowrap">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Rooms</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Restaurant</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="basel">
+			<div class="container baseline">
+				<div class="align-items-center g-0 row">
+					<h1 class="text-white">
+						The best hotel
+						<br>you will ever need
+					</h1>
+					<p class="text-white leads">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- *********************** BOOKING MODULE *********************** -->
+	<div class="bg-white py-4 booking-input position-relative">
+		<div class="container box shadow-lg position-absolute bottom-0 start-50 translate-middle">
+			<div class="d-flex justify-content-between align-items-end">
+				<div class="col-3">
+					<label for="basic-url" class="form-label">Check in Date</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="check in date">
+					</div>
+				</div>
+				<div class="col-3">
+					<label for="basic-url" class="form-label">Check out date</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="check out date">
+					</div>
+				</div>
+				<div class="col-3">
+					<label for="basic-url" class="form-label">Rooms</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="rooms">
+					</div>
+				</div>
+				<div class="">
+					<button class="btn btn-primary">
+						<i class="fa-solid fa-paper-plane"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- *********************** BOOKING MODULE - END *********************** -->
+
+	<!-- *********************** ABOUT US *********************** -->
+	<section class="mb-5">
+		<div class="about-us container">
+			<div class="row g-3 justify-content-between align-items-center">
+				<div class="col-12 col-md-6">
+					<p class="text-uppercase fw-bold text-primary m-0">about us</p>
+					<h2>
+						Trust and quality
+						<br>
+						are our atuus
+					</h2>
+					<p class="first-p">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+					</p>
+					<p class="second-p">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+					<button class="btn btn-primary col-4 text-white">
+						read more
+						<i class="pl-3 fa-solid fa-arrow-right"></i>
+					</button>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<div style="background-image:url({{ asset('images/aboutus/chelsea-gates-0653_wY0nRc-unsplash.jpg') }}); background-position: center left; background-size: cover; height: 185px"></div>
+						</div>
+						<div class="col-md-6">
+							<div style="background-image:url({{ asset('images/aboutus/rhema-kallianpur-jbJ-_hw2yag-unsplash.jpg') }}); background-position: center left; background-size: cover; height: 185px"></div>
+						</div>
+						<div class="img-2 col-12">
+							<div style="background-image:url({{ asset('images/aboutus/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpg') }}); background-position: center left; background-size: cover;height: 260px"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- *********************** ABOUT US END *********************** -->
+
+	<!-- *********************** SPLASH *********************** -->
+
+	<section class="splash mb-5">
+		<div class="d-flex align-items-center" style="background-image:url({{ asset('images/splash/chris-lee-70l1tDAI6rM-unsplash.jpg') }}); background-position: center left; background-size: cover;height: 612px">
+			<div class="container">
+				<div class="mb-5">
+					<p class="text-uppercase fw-bold text-primary m-0">about us</p>
+					<h2 class="text-white">
+						We bring you the
+						<br>
+						finest details
+					</h2>
+				</div>
+				<!-- CARD -->
+				<div class="row row-cols-md-6 row-cols-lg-4 g-4">
+					<div class="col">
+						<div class="card text-center" style="width: 260px; height:260px">
+							<div class="card-body row align-items-center p-3">
+								<div class="col-12 text-white">
+									<div class="first-items bg-primary">
+										<i class="fa-solid fa-wifi"></i>
+									</div>
+								</div>
+								<div class="sec-items col">
+									<h5 class="card-title mx-auto my-3" style="width:170px">
+										Free wifi to stay connected
+									</h5>
+									<p class="card-text text-secondary">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card text-center" style="width: 260px; height:260px">
+							<div class="card-body row align-items-center p-3">
+								<div class="col-12 text-white">
+									<div class="first-items bg-primary">
+										<i class="fa-solid fa-tv"></i>
+									</div>
+								</div>
+								<div class="sec-items col">
+									<h5 class="card-title mx-auto my-3" style="width:170px">
+										4K Television and Netflix included
+									</h5>
+									<p class="card-text text-secondary">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card text-center" style="width: 260px; height:260px">
+							<div class="card-body row align-items-center p-3">
+								<div class="col-12 text-white">
+									<div class="first-items bg-primary">
+										<i class="fa-solid fa-bed"></i>
+									</div>
+								</div>
+								<div class="sec-items col">
+									<h5 class="card-title mx-auto my-3" style="width:170px">
+										Spacious rooms for awesome parties
+									</h5>
+									<p class="card-text text-secondary">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card text-center" style="width: 260px; height:260px">
+							<div class="card-body row align-items-center p-3">
+								<div class="col-12 text-white">
+									<div class="first-items bg-primary">
+										<i class="fa-solid fa-martini-glass"></i>
+									</div>
+								</div>
+								<div class="sec-items col">
+									<h5 class="card-title mx-auto my-3" style="width:170px">
+										Span zone where you can chill
+									</h5>
+									<p class="card-text text-secondary">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- CARD -->
+			</div>
+		</div>
+	</section>
+	<!-- *********************** SPLASH - END *********************** -->
+
+
+	<!-- *********************** RESTAURANT *********************** -->
+	<section class="restaurant mb-5">
+		<div class="container">
+			<div class="mb-5">
+				<p class="text-uppercase fw-bold text-primary m-0">Restaurant</p>
+				<h2>
+					Explore our menu
+					<br>
+					and eat what you want
+				</h2>
+			</div>
+			<div class="row">
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="w-bg row g-0 align-items-center">
+						<div class="col-md-4">
+							<img src="{{ asset('images/restaurant/hamburger-with-french-fries-on-the-table.jpeg') }}" class="img-fluid" alt="..." style="heigth: 190px;">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<p class="text-uppercase fw-bold text-primary m-0">Food</p>
+								<h5 class="card-title">Fresh fish and onions</h5>
+								<p class="card-text text-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="w-bg row g-0 align-items-center">
+						<div class="col-md-4">
+							<img src="{{ asset('images/restaurant/restau.jpeg') }}" class="img-fluid" alt="..." style="heigth: 190px;">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<p class="text-uppercase fw-bold text-primary m-0">Food</p>
+								<h5 class="card-title">Fresh fish and onions</h5>
+								<p class="card-text text-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="w-bg row g-0 align-items-center">
+						<div class="col-md-4">
+							<img src="{{ asset('images/restaurant/restau.jpeg') }}" class="img-fluid" alt="..." style="heigth: 190px;">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<p class="text-uppercase fw-bold text-primary m-0">Food</p>
+								<h5 class="card-title">Fresh fish and onions</h5>
+								<p class="card-text text-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="w-bg row g-0 align-items-center">
+						<div class="col-md-4">
+							<img src="{{ asset('images/restaurant/hamburger-with-french-fries-on-the-table.jpeg') }}" class="img-fluid" alt="..." style="heigth: 190px;">
+						</div>
+						<div class="font-awesome-icons btn-cnt col-md-8">
+							<div class="card-body">
+								<p class="text-uppercase fw-bold text-primary m-0">Food</p>
+								<h5 class="card-title">Fresh fish and onions</h5>
+								<p class="card-text text-secondary">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- *********************** RESTAURANT *********************** -->
+
+	<!-- *********************** BLOG *********************** -->
+	<section class="blog mb-5">
+		<div class="container">
+			<div class="mb-5">
+				<p class="text-uppercase fw-bold text-primary m-0">Blog</p>
+				<h2>
+					Read our newest blog
+					<br>
+					post right away
+				</h2>
+			</div>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Cooking</p>
+							<h5 class="card-title my-2">Succed in hotel business</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/AdobeStock_320696442.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Food and life</p>
+							<h5 class="card-title my-2">Cooking delicious food</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Fruits</p>
+							<h5 class="card-title my-2">Getting fresh fruits</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/AdobeStock_320696442.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Fruits</p>
+							<h5 class="card-title my-2">Succed in hotel business</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Cooking</p>
+							<h5 class="card-title my-2">Getting fresh fruits</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col">
+					<div class="card card-hover text-center">
+						<div style="/*height:212px*/">
+							<img src="{{ asset('images/blog/AdobeStock_320696442.jpeg')}}" class="card-img-top" alt="..." style="max-width: 100%;max-height: 100%;">
+						</div>
+						<div class="card-body py-1 py-lg-4 px-1 px-lg-5">
+							<p class="text-uppercase fw-bold text-primary m-0">Food and life</p>
+							<h5 class="card-title my-2">Cooking delicious food</h5>
+							<p class="card-text text-secondary">Fresh food directly from our restaurant ready coocked for you.</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- *********************** BLOG *********************** -->
+
+	<!-- *********************** PICTURE *********************** -->
+	<section class="picture">
+		<div class="container">
+			<div class="mb-5">
+				<p class="text-uppercase fw-bold text-primary m-0">Photo</p>
+				<h2>
+					See our latest photos <br> from restaurant and hotel
+				</h2>
+			</div>
+		</div>
+		<div class="cnt-photos d-flex g-0">
+			<div class="img-1" style="width: 1200px;">
+				<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg') }}" alt="" class="mw-100 mh-100">
+			</div>
+			<div class="img-1" style="width: 1200px;">
+				<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg') }}" alt="" class="mw-100 mh-100">
+			</div>
+			<div class="img-1" style="width: 1200px;">
+				<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg') }}" alt="" class="mw-100 mh-100">
+			</div>
+			<div class="img-1" style="width: 1200px;">
+				<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg') }}" alt="" class="mw-100 mh-100">
+			</div>
+			<div class="img-1" style="width: 1200px;">
+				<img src="{{ asset('images/blog/eddi-aguirre-ZAVHbpOn4Jk-unsplash.jpeg') }}" alt="" class="mw-100 mh-100">
+			</div>
+		</div>
+	</section>
+	<!-- *********************** PICTURE *********************** -->
+
+
+	<!-- *********************** FOOTER *********************** -->
+
+	<footer class="footer bg-dark">
+		<div class="container">
+			<div class="row py-5">
+				<div class="col-sm-5 mb-4">
+					<div class="col-sm-12 col-md-10 col-lg-7">
+						<h4 class="text-white mb-4">
+							Pangalana Hotel
+						</h4>
+						<p class="text-secondary">
+							Our hotel is an image of quality and profesionalism combined with hard work and precision. You can expect only the best services from our staff.
+						</p>
+						<div class="social text-white">
+							<i class="fa-brands fa-facebook"></i>
+							<i class="fa-brands fa-facebook-messenger"></i>
+							<i class="fa-brands fa-instagram"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 col-sm-3 col-lg-2 mb-4">
+					<h5 class="text-white mb-4">
+						Useful links
+					</h5>
+					<div class="text-primary">
+						<ul class="nav flex-column">
+							<li class="nav-item">BLog</li>
+							<li class="nav-item">Rooms</li>
+							<li class="nav-item">Gift Card</li>
+							<li class="nav-item">Testimonials</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-6 col-sm-3 col-lg-2 mb-4">
+					<h5 class="text-white mb-4">
+						Privacy
+					</h5>
+					<div class="text-primary">
+						<ul class="nav flex-column">
+							<li class="nav-item">Career</li>
+							<li class="nav-item">About Us</li>
+							<li class="nav-item">Contact Us</li>
+							<li class="nav-item">Services</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-6 col-sm-3">
+					<h5 class="text-white">
+						Contact Info
+					</h5>
+					<div class="text-primary">
+						<ul class="nav flex-column">
+							<li class="nav-item">Career</li>
+							<li class="nav-item">About Us</li>
+							<li class="nav-item">Contact Us</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row py-2 text-center text-md-start">
+				<div class="col-12 col-lg-9 text-white">
+					<p>
+						Copyright ©{{"now"|date("Y")}} All rights reserved
+					</p>
+				</div>
+				<div class="col-12 col-lg-3 text-center text-md-start mb-3 my-md-0">
+					<a href="#" class="nav-link text-primary">www.pangalana.mg</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- *********************** FOOTER *********************** -->
+
+
 {% endblock %}

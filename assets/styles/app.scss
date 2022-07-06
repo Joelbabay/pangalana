@@ -15,6 +15,18 @@ h2 {
     font-size: 42px;
 }
 
+h4 {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
 p {
     font-size: 14px;
     font-weight: 400;
@@ -72,7 +84,7 @@ nav {
     $TITLE
 \*--------------------------------*/
 
-section {
+.basel {
     .baseline {
         margin-top: 180px;
     }
@@ -98,4 +110,70 @@ section {
 .booking-input {
     height: 148px;
     margin: 0 auto;
+}
+
+
+/*--------------------------------*\
+    $ABOUT US SECTION
+\*--------------------------------*/
+
+.about-us {
+    height: 461px !important;
+    .first-p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+}
+
+
+/*--------------------------------*\
+    $SPLASH SECTION
+\*--------------------------------*/
+
+.splash {
+    .first-items {
+        width: 59px;
+        height: 59px;
+        border-radius: 30px;
+        margin: 0 auto;
+        svg {
+            position: relative;
+            top: 18px;
+            height: 23px;
+        }
+    }
+}
+
+
+/*--------------------------------*\
+    $RESTAURANT
+\*--------------------------------*/
+
+.restaurant {
+    .card {
+        .w-bg {
+            background: #F8F8F8;
+        }
+        /* btn-cnt {
+            &:before {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                content: "\f061";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            } */
+    }
+}
+
+
+/*--------------------------------*\
+    $BLOG
+\*--------------------------------*/
+
+.blog {
+    .card {
+        background: #F8F8F8;
+    }
 }
